@@ -1,0 +1,6 @@
+{
+  "companies": [
+    {"name": "Example Bakery LLC", "jurisdiction": "us_wi", "company_number": "001"},
+    {"name": "Sample Cleaning Inc", "jurisdiction": "us_tx", "company_number": "002"}
+  ]
+}

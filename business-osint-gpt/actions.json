@@ -1,0 +1,58 @@
+{
+  "schema_version": "v1",
+  "name_for_human": "Business OSINT Assistant",
+  "name_for_model": "business_osint_assistant",
+  "description_for_human": "Find market, competitor, customer, and government data using free public sources.",
+  "description_for_model": "Helps U.S. small business owners by searching free public databases for companies, market trends, local competitors, industry data, customer demographics, grants, website technology stacks, and ad transparency.",
+  "auth": {
+    "type": "none"
+  },
+  "api": {
+    "type": "openapi",
+    "url": "openapi.yaml"
+  },
+  "contact_email": "support@example.com",
+  "legal_info_url": "https://opensource.org/licenses/MIT",
+  "actions": [
+    {
+      "name": "search_companies",
+      "description": "Search for companies in OpenCorporates database.",
+      "api_path": "/search_companies"
+    },
+    {
+      "name": "get_market_trends",
+      "description": "Retrieve Google Trends data via PyTrends proxy.",
+      "api_path": "/get_market_trends"
+    },
+    {
+      "name": "get_local_competitors",
+      "description": "Find local competitors using Yelp data.",
+      "api_path": "/get_local_competitors"
+    },
+    {
+      "name": "get_industry_data",
+      "description": "Retrieve industry statistics from NAICS / Census API.",
+      "api_path": "/get_industry_data"
+    },
+    {
+      "name": "get_customer_data",
+      "description": "Get demographic data from DataUSA.",
+      "api_path": "/get_customer_data"
+    },
+    {
+      "name": "get_grants",
+      "description": "Search for grants using Grants.gov API.",
+      "api_path": "/get_grants"
+    },
+    {
+      "name": "get_website_stack",
+      "description": "Fetch technology stack information using BuiltWith. Results include a direct link to https://builtwith.com/ for further details.",
+      "api_path": "/get_website_stack"
+    },
+    {
+      "name": "get_ad_transparency",
+      "description": "Search the Meta Ad Library for transparency information. The response provides a link formatted as https://www.facebook.com/ads/library/?active_status=all&search_type=keyword&q=YOUR_QUERY",
+      "api_path": "/get_ad_transparency"
+    }
+  ]
+}
