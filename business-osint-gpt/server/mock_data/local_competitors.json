@@ -1,0 +1,6 @@
+{
+  "businesses": [
+    {"name": "Madison Bakery", "rating": 4.7, "address": "1 Cake St"},
+    {"name": "Sweet Treats", "rating": 4.5, "address": "2 Sugar Ave"}
+  ]
+}
