@@ -3,8 +3,8 @@
     "name": "OpenCorporates",
     "description": "Largest open database of companies in the world",
     "category": "companies",
-    "url": "https://api.opencorporates.com"
-  },
+    "url": "https://api.opencorporates.com/v0.4/companies/search"
+
   {
     "name": "Google Trends (PyTrends)",
     "description": "Unofficial API for Google Trends data",
@@ -15,36 +15,39 @@
     "name": "Yelp Fusion API",
     "description": "Business listings and reviews",
     "category": "competitors",
-    "url": "https://www.yelp.com/developers"
+    "url": "https://api.yelp.com/v3/businesses/search"
   },
   {
     "name": "NAICS/Census API",
     "description": "Industry statistics by NAICS code",
     "category": "industry",
-    "url": "https://www.census.gov/services/api/"
+    "url": "https://api.census.gov/data/"
   },
   {
     "name": "DataUSA",
     "description": "Demographic and economic data",
     "category": "customer",
-    "url": "https://datausa.io/about/api/"
+    "url": "https://datausa.io/api/"
   },
   {
     "name": "Grants.gov",
     "description": "Federal grants search",
     "category": "grants",
-    "url": "https://www.grants.gov"
+    "url": "https://www.grants.gov/grantsws/rest/opportunities/search"
+
   },
   {
     "name": "BuiltWith",
     "description": "Lookup website technology stacks",
     "category": "web",
-    "url": "https://builtwith.com"
+    "url": "https://builtwith.com/"
+
   },
   {
     "name": "Meta Ad Library",
     "description": "Search advertising transparency data",
     "category": "ads",
-    "url": "https://www.facebook.com/ads/library"
+    "url": "https://www.facebook.com/ads/library/?active_status=all&search_type=keyword&q="
+
   }
 ]
