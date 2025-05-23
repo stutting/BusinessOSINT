@@ -1,0 +1,6 @@
+{
+  "technologies": [
+    {"name": "Nginx", "category": "Web Server"},
+    {"name": "WordPress", "category": "CMS"}
+  ]
+}
