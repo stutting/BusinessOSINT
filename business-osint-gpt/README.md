@@ -28,6 +28,7 @@ curl "http://localhost:5000/search_companies?query=bakery"
 Push this repository to GitHub. Enable GitHub Actions or your own CI/CD pipeline if desired.
 The assistant relies on public APIs and manual search links such as [BuiltWith](https://builtwith.com/) and the [Meta Ad Library](https://www.facebook.com/ads/library/).
 
+
 ## Uploading to GPT Builder
 
 1. Go to [https://platform.openai.com/](https://platform.openai.com/) and create a new GPT.

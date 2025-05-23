@@ -30,6 +30,7 @@ paths:
   /get_market_trends:
     get:
       summary: Get Google Trends data via PyTrends (https://github.com/GeneralMills/pytrends)
+
       parameters:
         - in: query
           name: keyword
@@ -56,6 +57,7 @@ paths:
   /get_local_competitors:
     get:
       summary: Get local competitors from Yelp Fusion API (https://api.yelp.com/v3/businesses/search)
+
       parameters:
         - in: query
           name: term
@@ -83,6 +85,7 @@ paths:
   /get_industry_data:
     get:
       summary: Get industry statistics from NAICS / Census API (https://api.census.gov/data/)
+
       parameters:
         - in: query
           name: naics
@@ -104,6 +107,7 @@ paths:
   /get_customer_data:
     get:
       summary: Get demographic data from DataUSA (https://datausa.io/api/)
+
       parameters:
         - in: query
           name: location
@@ -145,6 +149,7 @@ paths:
   /get_website_stack:
     get:
       summary: Get website technology stack via BuiltWith (https://builtwith.com/)
+
       parameters:
         - in: query
           name: url
@@ -165,6 +170,7 @@ paths:
   /get_ad_transparency:
     get:
       summary: Search Meta Ad Library (https://www.facebook.com/ads/library/)
+
       parameters:
         - in: query
           name: query

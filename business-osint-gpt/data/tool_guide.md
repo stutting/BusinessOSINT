@@ -37,6 +37,7 @@ This guide outlines the free data sources used by the Business OSINT Assistant a
 - **Use case**: See what technologies competitors use.
 - **GPT usage**: Provides a direct link to `https://builtwith.com/<domain>` via `/get_website_stack` output.
 
+
 ## Meta Ad Library
 - **What it is**: Transparency database of ads on Meta platforms.
 - **Use case**: Research advertiser activity in your market.

@@ -47,11 +47,13 @@
     {
       "name": "get_website_stack",
       "description": "Fetch technology stack information using BuiltWith. Results include a direct link to https://builtwith.com/ for further details.",
+
       "api_path": "/get_website_stack"
     },
     {
       "name": "get_ad_transparency",
       "description": "Search the Meta Ad Library for transparency information. The response provides a link formatted as https://www.facebook.com/ads/library/?active_status=all&search_type=keyword&q=YOUR_QUERY",
+
       "api_path": "/get_ad_transparency"
     }
   ]
