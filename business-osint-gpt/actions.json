@@ -1,0 +1,22 @@
+{
+  "schema_version": "v1",
+  "name_for_human": "Business OSINT Assistant",
+  "name_for_model": "business_osint",
+  "description_for_human": "Helps small businesses gather OSINT from free public data sources.",
+  "description_for_model": "Provides actions to search companies, analyze market trends, find local competitors, gather industry and customer data, explore grants, inspect website technology stacks, and review ad transparency reports.",
+  "auth": {"type": "none"},
+  "api": {"type": "openapi", "url": "openapi.yaml"},
+  "logo_url": "https://example.com/logo.png",
+  "contact_email": "support@example.com",
+  "legal_info_url": "https://example.com/legal",
+  "actions": [
+    {"name": "search_companies", "description": "Look up companies by name or location via OpenCorporates."},
+    {"name": "get_market_trends", "description": "Fetch market search trend data via Google Trends."},
+    {"name": "get_local_competitors", "description": "List nearby competitors from Yelp."},
+    {"name": "get_industry_data", "description": "Retrieve industry statistics from NAICS / U.S. Census."},
+    {"name": "get_customer_data", "description": "Retrieve demographic and economic data via DataUSA."},
+    {"name": "get_grants", "description": "Find government grants via Grants.gov."},
+    {"name": "get_website_stack", "description": "Check website technology stack using BuiltWith."},
+    {"name": "get_ad_transparency", "description": "See ads run by businesses using Meta Ad Library."}
+  ]
+}

@@ -1,0 +1,50 @@
+[
+  {
+    "name": "OpenCorporates",
+    "description": "Largest open database of companies in the world.",
+    "category": "company_search",
+    "url": "https://opencorporates.com"
+  },
+  {
+    "name": "Google Trends",
+    "description": "Shows search interest over time for topics and keywords.",
+    "category": "market_trends",
+    "url": "https://trends.google.com"
+  },
+  {
+    "name": "Yelp API",
+    "description": "Provides business listings and reviews for local competitors.",
+    "category": "competitors",
+    "url": "https://www.yelp.com/developers"
+  },
+  {
+    "name": "NAICS / Census API",
+    "description": "Official industry classification and statistics for the U.S.",
+    "category": "industry_data",
+    "url": "https://api.census.gov/data.html"
+  },
+  {
+    "name": "DataUSA",
+    "description": "Demographic and economic data about locations and industries.",
+    "category": "customer_data",
+    "url": "https://datausa.io"
+  },
+  {
+    "name": "Grants.gov",
+    "description": "Federal grant opportunities for businesses and nonprofits.",
+    "category": "grants",
+    "url": "https://grants.gov"
+  },
+  {
+    "name": "BuiltWith",
+    "description": "Analyzes websites to identify technology stacks.",
+    "category": "website_stack",
+    "url": "https://builtwith.com"
+  },
+  {
+    "name": "Meta Ad Library",
+    "description": "Searchable database of ads running across Meta platforms.",
+    "category": "ad_transparency",
+    "url": "https://www.facebook.com/ads/library"
+  }
+]

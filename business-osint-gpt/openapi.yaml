@@ -1,0 +1,182 @@
+openapi: 3.0.1
+info:
+  title: Business OSINT Assistant API
+  description: Mock API providing public business intelligence data.
+  version: "1.0.0"
+servers:
+  - url: http://localhost:5000
+paths:
+  /search_companies:
+    get:
+      summary: Search for companies using OpenCorporates.
+      parameters:
+        - in: query
+          name: query
+          description: Name or keyword to search companies.
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: List of companies matching the query.
+          content:
+            application/json:
+              example:
+                companies:
+                  - name: Example Corp
+                    jurisdiction: us_ca
+                    company_number: "1234567"
+  /market_trends:
+    get:
+      summary: Get market trend data from Google Trends.
+      parameters:
+        - in: query
+          name: keyword
+          description: Keyword to check search trend for.
+          required: true
+          schema:
+            type: string
+        - in: query
+          name: location
+          description: Optional geographic location (e.g., us).
+          required: false
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Trend data for the keyword.
+          content:
+            application/json:
+              example:
+                keyword: electric bikes
+                location: us
+                trend: [10, 20, 30]
+  /local_competitors:
+    get:
+      summary: List local competitors using Yelp.
+      parameters:
+        - in: query
+          name: term
+          description: Business search term.
+          required: true
+          schema:
+            type: string
+        - in: query
+          name: location
+          description: City or region to search in.
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Nearby businesses matching the term.
+          content:
+            application/json:
+              example:
+                businesses:
+                  - name: Sample Bakery
+                    rating: 4.5
+                    address: 123 Main St
+  /industry_data:
+    get:
+      summary: Retrieve industry statistics from NAICS/Census.
+      parameters:
+        - in: query
+          name: naics_code
+          description: NAICS code representing the industry.
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Industry statistics.
+          content:
+            application/json:
+              example:
+                naics_code: "722310"
+                establishments: 5000
+                employees: 25000
+  /customer_data:
+    get:
+      summary: Get demographic data via DataUSA.
+      parameters:
+        - in: query
+          name: location
+          description: City, state, or county.
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Demographic statistics.
+          content:
+            application/json:
+              example:
+                location: "Miami, FL"
+                population: 500000
+                median_income: 55000
+  /grants:
+    get:
+      summary: Search for grants on Grants.gov.
+      parameters:
+        - in: query
+          name: keyword
+          description: Keyword describing the grant type.
+          required: true
+          schema:
+            type: string
+        - in: query
+          name: state
+          description: Optional U.S. state abbreviation.
+          required: false
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Grants matching the criteria.
+          content:
+            application/json:
+              example:
+                grants:
+                  - title: Small Business Innovation Grant
+                    agency: SBA
+                    link: https://grants.gov/example
+  /website_stack:
+    get:
+      summary: Get website technology stack from BuiltWith.
+      parameters:
+        - in: query
+          name: url
+          description: Website URL to analyze.
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Detected technology stack.
+          content:
+            application/json:
+              example:
+                url: https://example.com
+                technologies:
+                  - Flask
+                  - PostgreSQL
+  /ad_transparency:
+    get:
+      summary: Search the Meta Ad Library.
+      parameters:
+        - in: query
+          name: search_term
+          description: Keyword or page name to search ads for.
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Ads matching the search term.
+          content:
+            application/json:
+              example:
+                results:
+                  - advertiser: Example Co
+                    ad_count: 5
