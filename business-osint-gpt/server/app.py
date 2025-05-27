@@ -1,64 +1,47 @@
 from flask import Flask, jsonify, request
-import os
 import json
+import os
 
 app = Flask(__name__)
+DATA_DIR = os.path.join(os.path.dirname(__file__), 'mock_data')
 
 def load_json(filename):
-    """Utility function to load a JSON file from mock_data directory."""
-    filepath = os.path.join(os.path.dirname(__file__), 'mock_data', filename)
-    with open(filepath, 'r') as f:
+    """Utility to load a JSON file from the mock_data directory."""
+    path = os.path.join(DATA_DIR, filename)
+    with open(path, 'r') as f:
         return json.load(f)
 
 @app.route('/search_companies')
 def search_companies():
-    data = load_json('search_companies.json')
-    query = request.args.get('query')
-    return jsonify(data)
+    return jsonify(load_json('search_companies.json'))
 
-@app.route('/get_market_trends')
-def get_market_trends():
-    data = load_json('market_trends.json')
-    keyword = request.args.get('keyword')
-    geo = request.args.get('geo')
-    return jsonify(data)
+@app.route('/market_trends')
+def market_trends():
+    return jsonify(load_json('get_market_trends.json'))
 
-@app.route('/get_local_competitors')
-def get_local_competitors():
-    data = load_json('local_competitors.json')
-    term = request.args.get('term')
-    location = request.args.get('location')
-    return jsonify(data)
+@app.route('/local_competitors')
+def local_competitors():
+    return jsonify(load_json('get_local_competitors.json'))
 
-@app.route('/get_industry_data')
-def get_industry_data():
-    data = load_json('industry_data.json')
-    naics = request.args.get('naics')
-    return jsonify(data)
+@app.route('/industry_data')
+def industry_data():
+    return jsonify(load_json('get_industry_data.json'))
 
-@app.route('/get_customer_data')
-def get_customer_data():
-    data = load_json('customer_data.json')
-    location = request.args.get('location')
-    return jsonify(data)
+@app.route('/customer_data')
+def customer_data():
+    return jsonify(load_json('get_customer_data.json'))
 
-@app.route('/get_grants')
-def get_grants():
-    data = load_json('grants.json')
-    keyword = request.args.get('keyword')
-    return jsonify(data)
+@app.route('/grants')
+def grants():
+    return jsonify(load_json('get_grants.json'))
 
-@app.route('/get_website_stack')
-def get_website_stack():
-    data = load_json('website_stack.json')
-    url = request.args.get('url')
-    return jsonify(data)
+@app.route('/website_stack')
+def website_stack():
+    return jsonify(load_json('get_website_stack.json'))
 
-@app.route('/get_ad_transparency')
-def get_ad_transparency():
-    data = load_json('ad_transparency.json')
-    query = request.args.get('query')
-    return jsonify(data)
+@app.route('/ad_transparency')
+def ad_transparency():
+    return jsonify(load_json('get_ad_transparency.json'))
 
 if __name__ == '__main__':
     app.run(debug=True)

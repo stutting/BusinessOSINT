@@ -1,53 +1,52 @@
 [
   {
     "name": "OpenCorporates",
-    "description": "Largest open database of companies in the world",
-    "category": "companies",
-    "url": "https://api.opencorporates.com/v0.4/companies/search"
 
-  {
-    "name": "Google Trends (PyTrends)",
-    "description": "Unofficial API for Google Trends data",
-    "category": "trends",
-    "url": "https://github.com/GeneralMills/pytrends"
+    "description": "Largest open database of companies in the world.",
+    "category": "company_search",
+    "url": "https://opencorporates.com"
   },
   {
-    "name": "Yelp Fusion API",
-    "description": "Business listings and reviews",
+    "name": "Google Trends",
+    "description": "Shows search interest over time for topics and keywords.",
+    "category": "market_trends",
+    "url": "https://trends.google.com"
+  },
+  {
+    "name": "Yelp API",
+    "description": "Provides business listings and reviews for local competitors.",
     "category": "competitors",
-    "url": "https://api.yelp.com/v3/businesses/search"
+    "url": "https://www.yelp.com/developers"
   },
   {
-    "name": "NAICS/Census API",
-    "description": "Industry statistics by NAICS code",
-    "category": "industry",
-    "url": "https://api.census.gov/data/"
+    "name": "NAICS / Census API",
+    "description": "Official industry classification and statistics for the U.S.",
+    "category": "industry_data",
+    "url": "https://api.census.gov/data.html"
   },
   {
     "name": "DataUSA",
-    "description": "Demographic and economic data",
-    "category": "customer",
-    "url": "https://datausa.io/api/"
+    "description": "Demographic and economic data about locations and industries.",
+    "category": "customer_data",
+    "url": "https://datausa.io"
   },
   {
     "name": "Grants.gov",
-    "description": "Federal grants search",
+    "description": "Federal grant opportunities for businesses and nonprofits.",
     "category": "grants",
-    "url": "https://www.grants.gov/grantsws/rest/opportunities/search"
-
+    "url": "https://grants.gov"
   },
   {
     "name": "BuiltWith",
-    "description": "Lookup website technology stacks",
-    "category": "web",
-    "url": "https://builtwith.com/"
-
+    "description": "Analyzes websites to identify technology stacks.",
+    "category": "website_stack",
+    "url": "https://builtwith.com"
   },
   {
     "name": "Meta Ad Library",
-    "description": "Search advertising transparency data",
-    "category": "ads",
-    "url": "https://www.facebook.com/ads/library/?active_status=all&search_type=keyword&q="
+    "description": "Searchable database of ads running across Meta platforms.",
+    "category": "ad_transparency",
+    "url": "https://www.facebook.com/ads/library"
 
   }
 ]

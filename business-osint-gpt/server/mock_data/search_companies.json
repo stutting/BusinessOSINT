@@ -1,6 +1,7 @@
 {
   "companies": [
-    {"name": "Example Bakery LLC", "jurisdiction": "us_wi", "company_number": "001"},
-    {"name": "Sample Cleaning Inc", "jurisdiction": "us_tx", "company_number": "002"}
+    {"name": "Acme Bakery", "jurisdiction": "us_ca", "company_number": "A12345"},
+    {"name": "Bake House", "jurisdiction": "us_ca", "company_number": "B98765"}
+
   ]
 }

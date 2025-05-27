@@ -1,79 +1,77 @@
 openapi: 3.0.1
 info:
   title: Business OSINT Assistant API
-  description: Mock API for Business OSINT Assistant
-  version: 1.0.0
+  description: Mock API providing public business intelligence data.
+  version: "1.0.0"
 servers:
   - url: http://localhost:5000
 paths:
   /search_companies:
     get:
-      summary: Search for companies using OpenCorporates (https://api.opencorporates.com/v0.4/companies/search)
+      summary: Search for companies using OpenCorporates.
       parameters:
         - in: query
           name: query
+          description: Name or keyword to search companies.
+          required: true
           schema:
             type: string
-          required: true
-          description: Company name or keyword
       responses:
         '200':
-          description: A list of matching companies
+          description: List of companies matching the query.
           content:
             application/json:
               example:
                 companies:
                   - name: Example Corp
                     jurisdiction: us_ca
-                    company_number: '1234567'
+                    company_number: "1234567"
 
-  /get_market_trends:
+  /market_trends:
     get:
-      summary: Get Google Trends data via PyTrends (https://github.com/GeneralMills/pytrends)
-
+      summary: Get market trend data from Google Trends.
       parameters:
         - in: query
           name: keyword
-          schema:
-            type: string
+          description: Keyword to check search trend for.
           required: true
-          description: Keyword to search
-        - in: query
-          name: geo
           schema:
             type: string
+        - in: query
+          name: location
+          description: Optional geographic location (e.g., us).
           required: false
-          description: Geography code (e.g., US-NY)
+          schema:
+            type: string
       responses:
         '200':
-          description: Time series of interest values
+          description: Trend data for the keyword.
           content:
             application/json:
               example:
-                trend:
-                  - date: '2023-01-01'
-                    interest: 50
+                keyword: electric bikes
+                location: us
+                trend: [10, 20, 30]
 
-  /get_local_competitors:
+  /local_competitors:
     get:
-      summary: Get local competitors from Yelp Fusion API (https://api.yelp.com/v3/businesses/search)
-
+      summary: List local competitors using Yelp.
       parameters:
         - in: query
           name: term
+          description: Business search term.
+          required: true
           schema:
             type: string
-          required: true
-          description: Business search term
         - in: query
           name: location
+          description: City or region to search in.
+          required: true
           schema:
             type: string
-          required: true
-          description: City or location
       responses:
         '200':
-          description: A list of businesses
+          description: Nearby businesses matching the term.
           content:
             application/json:
               example:
@@ -82,108 +80,110 @@ paths:
                     rating: 4.5
                     address: 123 Main St
 
-  /get_industry_data:
+  /industry_data:
     get:
-      summary: Get industry statistics from NAICS / Census API (https://api.census.gov/data/)
-
+      summary: Retrieve industry statistics from NAICS/Census.
       parameters:
         - in: query
-          name: naics
+          name: naics_code
+          description: NAICS code representing the industry.
+          required: true
           schema:
             type: string
-          required: true
-          description: NAICS code
       responses:
         '200':
-          description: Industry statistics data
+          description: Industry statistics.
           content:
             application/json:
               example:
-                industry:
-                  naics: '311811'
-                  establishments: 1000
-                  employment: 50000
+                naics_code: "722310"
+                establishments: 5000
+                employees: 25000
 
-  /get_customer_data:
+  /customer_data:
     get:
-      summary: Get demographic data from DataUSA (https://datausa.io/api/)
-
+      summary: Get demographic data via DataUSA.
       parameters:
         - in: query
           name: location
+          description: City, state, or county.
+          required: true
           schema:
             type: string
-          required: true
-          description: Location or FIPS code
       responses:
         '200':
-          description: Demographic statistics
+          description: Demographic statistics.
           content:
             application/json:
               example:
-                demographics:
-                  population: 100000
-                  median_age: 35.5
+                location: "Miami, FL"
+                population: 500000
+                median_income: 55000
 
-  /get_grants:
+  /grants:
     get:
-      summary: Search for grants on Grants.gov (https://www.grants.gov/grantsws/rest/opportunities/search)
+      summary: Search for grants on Grants.gov.
       parameters:
         - in: query
           name: keyword
+          description: Keyword describing the grant type.
+          required: true
           schema:
             type: string
-          required: true
-          description: Search keyword
+        - in: query
+          name: state
+          description: Optional U.S. state abbreviation.
+          required: false
+          schema:
+            type: string
       responses:
         '200':
-          description: List of grant opportunities
+          description: Grants matching the criteria.
           content:
             application/json:
               example:
                 grants:
-                  - title: Small Business Grant
+                  - title: Small Business Innovation Grant
                     agency: SBA
-                    deadline: 2024-05-01
+                    link: https://grants.gov/example
 
-  /get_website_stack:
+  /website_stack:
     get:
-      summary: Get website technology stack via BuiltWith (https://builtwith.com/)
-
+      summary: Get website technology stack from BuiltWith.
       parameters:
         - in: query
           name: url
+          description: Website URL to analyze.
+          required: true
           schema:
             type: string
-          required: true
-          description: Website URL
       responses:
         '200':
-          description: Technology stack information
+          description: Detected technology stack.
           content:
             application/json:
               example:
+                url: https://example.com
                 technologies:
-                  - name: WordPress
-                    category: CMS
+                  - Flask
+                  - PostgreSQL
 
-  /get_ad_transparency:
+  /ad_transparency:
     get:
-      summary: Search Meta Ad Library (https://www.facebook.com/ads/library/)
-
+      summary: Search the Meta Ad Library.
       parameters:
         - in: query
-          name: query
+          name: search_term
+          description: Keyword or page name to search ads for.
+          required: true
           schema:
             type: string
-          required: true
-          description: Search keyword or page
       responses:
         '200':
-          description: Ad transparency results
+          description: Ads matching the search term.
           content:
             application/json:
               example:
-                ads:
-                  - advertiser: Sample Brand
-                    ad_count: 20
+                results:
+                  - advertiser: Example Co
+                    ad_count: 5
