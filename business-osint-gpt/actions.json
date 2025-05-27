@@ -1,6 +1,7 @@
 {
   "schema_version": "v1",
   "name_for_human": "Business OSINT Assistant",
+
   "name_for_model": "business_osint",
   "description_for_human": "Helps small businesses gather OSINT from free public data sources.",
   "description_for_model": "Provides actions to search companies, analyze market trends, find local competitors, gather industry and customer data, explore grants, inspect website technology stacks, and review ad transparency reports.",
@@ -18,5 +19,6 @@
     {"name": "get_grants", "description": "Find government grants via Grants.gov."},
     {"name": "get_website_stack", "description": "Check website technology stack using BuiltWith."},
     {"name": "get_ad_transparency", "description": "See ads run by businesses using Meta Ad Library."}
+
   ]
 }

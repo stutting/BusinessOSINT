@@ -1,0 +1,7 @@
+{
+  "ads": [
+    {"advertiser": "Yoga Gear Co", "ad_count": 15},
+    {"advertiser": "Fitness Apparel", "ad_count": 9}
+  ],
+  "link": "https://www.facebook.com/ads/library/?active_status=all&search_type=keyword&q=yoga+gear"
+}

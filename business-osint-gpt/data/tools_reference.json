@@ -1,6 +1,7 @@
 [
   {
     "name": "OpenCorporates",
+
     "description": "Largest open database of companies in the world.",
     "category": "company_search",
     "url": "https://opencorporates.com"
@@ -46,5 +47,6 @@
     "description": "Searchable database of ads running across Meta platforms.",
     "category": "ad_transparency",
     "url": "https://www.facebook.com/ads/library"
+
   }
 ]

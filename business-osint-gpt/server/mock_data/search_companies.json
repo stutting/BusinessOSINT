@@ -2,5 +2,6 @@
   "companies": [
     {"name": "Acme Bakery", "jurisdiction": "us_ca", "company_number": "A12345"},
     {"name": "Bake House", "jurisdiction": "us_ca", "company_number": "B98765"}
+
   ]
 }
